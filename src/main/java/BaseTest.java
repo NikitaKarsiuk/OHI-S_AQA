@@ -14,7 +14,6 @@ public class BaseTest {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
-    protected static final String WEB_LINK = "https://qa2.ohi-s.com/";
 
     @BeforeMethod
     public void setUp() {
@@ -23,7 +22,6 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, 10);
-        driver.get(WEB_LINK);
     }
 
     @AfterMethod

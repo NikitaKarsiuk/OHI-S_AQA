@@ -28,4 +28,10 @@ public class BasePage {
             System.out.println("Cookie has already been accepted");
         }
     }
+
+    @Step("Open link")
+    public void OpenPageLink(String link)
+    {
+        driver.get(link);
+    }
 }
