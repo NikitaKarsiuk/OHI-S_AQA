@@ -23,7 +23,7 @@ public class OHIsTests extends BaseTest {
     @Story("Home page check")
     @Description("The test checks whether the home page opens")
     public void testOpenHomepage() {
-        basePage.OpenPageLink(webLink);
+        basePage.OpenWebLink(webLink);
         basePage.acceptCookies();
         Assert.assertTrue(homePage.isOpenedHomePage(), "The page didn't load");
     }

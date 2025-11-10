@@ -30,7 +30,7 @@ public class BasePage {
     }
 
     @Step("Open link")
-    public void OpenPageLink(String link)
+    public void OpenWebLink(String link)
     {
         driver.get(link);
     }
