@@ -10,21 +10,19 @@ import org.testng.annotations.Test;
 
 public class OHIsTests extends BaseTest {
     private HomePage homePage;
-    private BasePage basePage;
-    private static final String webLink = "https://qa2.ohi-s.com/";
+
 
     @BeforeMethod
     public void initPages() {
         homePage = new HomePage(driver);
-        basePage = new BasePage(driver);
     }
 
     @Test
     @Story("Home page check")
     @Description("The test checks whether the home page opens")
     public void testOpenHomepage() {
-        basePage.OpenWebLink(webLink);
-        basePage.acceptCookies();
+        homePage.open()
+                .acceptCookies();
         Assert.assertTrue(homePage.isOpenedHomePage(), "The page didn't load");
     }
 }
