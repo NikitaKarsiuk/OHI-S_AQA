@@ -1,0 +1,1 @@
+{"uuid":"33345fe7-d405-466b-8b36-4ed34a4f980d","name":"Test.MarketTests.initPages","children":["84fafa20-d892-44fb-aeb0-29eee9269e27"],"description":"","befores":[{"name":"initPages","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1764173249816,"stop":1764173249857}],"afters":[],"start":1764173249816,"stop":1764173249857}
