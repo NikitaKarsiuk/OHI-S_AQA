@@ -277,7 +277,7 @@ public class MarketTests extends BaseTest {
     @Test
     @Story("Test filter on my orders page")
     @Description("The test checks whether the filter works")
-    public void testOpenOrderDetailsPage() throws InterruptedException {
+    public void testOpenOrderDetailsPage() {
         String searchQuery = "Canceled by dealer";
 
         homePage.open()
@@ -292,9 +292,10 @@ public class MarketTests extends BaseTest {
         marketPage.clickMyOrdersTab();
         Assert.assertTrue(myOrders.isOpened(), "My Orders page is not opened");;
         Assert.assertTrue(myOrders.isOrdersListDisplayed(), "Orders list is not displayed");
-        String listDetails = myOrders.getFirstOrderNumber();
+        String orderNumber = myOrders.getFirstOrderNumber();
         myOrders.clickFirstOrder();
         Assert.assertTrue(orderDetail.isOpened(), "Detail page is not opened");
+        Assert.assertEquals(orderNumber, orderDetail.getOrderNumberFromHeader(), "The order on the details page does not match the orders page");
     }
 
     private void doesOrderContainResult(int resultsCount, String searchQuery){
